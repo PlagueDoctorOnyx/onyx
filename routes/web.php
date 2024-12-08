@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('employee/profile');
+Route::get('/forum', function () {
+    $basepath = "my/onyx/public";
+    return view('forum/forumOverview', ["path"=>$basepath]);
 });
