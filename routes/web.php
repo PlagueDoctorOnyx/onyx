@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Thread;
 use Illuminate\Foundation\Application;
@@ -16,17 +15,7 @@ Route::get('/', function () {
 
 // Forum
 Route::get('/forum', function () {
-    return view('forum/forumOverview');
-});
-
-Route::get('/forum/stories', function () {
-    return view('forum/forumStories', [
-        'data' => Thread::get()
-    ]);
-});
-
-Route::controller(ForumController::class)->group(function () {
-    Route::get('/forum/stories/{id}', 'showStory');
+    return Inertia::render('forum.overview');
 });
 
 
