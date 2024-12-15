@@ -29,7 +29,7 @@ Route::controller(ForumController::class)->group(function () {
 // Profil
 
 Route::get('/profile', function () {
-    return view('');
+    return view('profile/main');
 });
 
 
