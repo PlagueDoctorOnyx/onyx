@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection as SupportCollection;
 
+/**
+ * @property $id;
+ * @property $user_id;
+ * @property $name;
+ * @property $content;
+ * @property $created_at;
+ * @property $updated_at;
+ */
+
 class Thread extends Model
 {
     protected $table = 'thread';
@@ -19,7 +28,7 @@ class Thread extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function comments(): HasMany
+    public function content(): HasMany
     {
         return $this->hasMany(ThreadContent::class, 'thread_id');
     }
@@ -37,12 +46,12 @@ class Thread extends Model
 
     public function getThreadContent(): Collection
     {
-        return $this->comments()->get();
+        return $this->content()->get();
     }
 
     public function getCommentCount(): int
     {
-        $comments = $this->comments()->get();
+        $comments = $this->content()->get();
         return count($comments);
     }
 

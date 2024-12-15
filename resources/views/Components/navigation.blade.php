@@ -25,6 +25,9 @@
                                 <a class="nav-link" aria-current="page" href="">Tickets</a>
                             </li>
                         </ul>
+                        <div class="d-flex>">
+                            <a href="{{ URL::to('/') }}">Profile</a>
+                        </div>
                     </div>
                 </div>
             </nav>

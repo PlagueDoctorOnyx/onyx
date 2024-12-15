@@ -10,6 +10,7 @@
     </div>
     <div class="row px-3 pt-2">
         <p>Wilkommen beim Forum! Hier hast du einen Überblick über alle möglichen Themen</p>
+        <a href="{{ URL::to('/forum/stories') }}">Creativ Writing</a>
     </div>
 </div>
 
