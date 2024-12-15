@@ -5,12 +5,11 @@
 </div>
 
 <div class="container mt-5 border">
-    <div class="row bs-light border-bottom">
+    <div class="row bs-light border-bottom text-bg-dark">
         <h3>Info</h3>
     </div>
     <div class="row px-3 pt-2">
         <p>Wilkommen beim Forum! Hier hast du einen Überblick über alle möglichen Themen</p>
-        <p>{{ request()->path() }}</p>
     </div>
 </div>
 
