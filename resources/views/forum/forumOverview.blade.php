@@ -8,9 +8,13 @@
     <div class="row bs-light border-bottom">
         <h3>Info</h3>
     </div>
-    <div class="row">
+    <div class="row px-3 pt-2">
         <p>Wilkommen beim Forum! Hier hast du einen Überblick über alle möglichen Themen</p>
+        <p>{{ request()->path() }}</p>
     </div>
 </div>
+
+<!-- Hier kommmen die Kategorien oder Bereiche des Forums hin. Creatives Schreiben, Video Spiele, Allgemein -->
+
 
 <x-footer></x-footer>
