@@ -7,22 +7,18 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-$currentUser = Auth::id();
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 // Forum
-Route::get('/forum', function () {
-    return Inertia::render('forum.overview');
+Route::get('/forum/overview', function () {
+    return Inertia::render('Forum/Overview');
 });
-
 
 // Profil
-Route::get('/profile', function () {
-    return view('');
-});
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

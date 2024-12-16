@@ -1,12 +1,25 @@
+<script setup>
+  import { Link } from '@inertiajs/vue3';
+</script>
+
 <template>
-    <main>
-      <header>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-      </header>
-      <article>
-        <slot />
-      </article>
-    </main>
-  </template>
+
+    <div class="container mt-3">
+      <h2>Forum</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><Link href="/dashboard">Threads</Link></li>
+      </ul>
+    </nav>
+
+    <div class="container mt-5 border">
+      <div class="row bs-light border-bottom text-bg-dark">
+        <h3>Info</h3>
+      </div>
+      <div class="row px-3 pt-2">
+        <p>Wilkommen beim Forum! Hier hast du einen Überblick über alle möglichen Themen</p>
+      </div>
+    </div>
+</template>
